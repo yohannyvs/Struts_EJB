@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="example" namespace="/example" extends="struts-default">
+         <action name="HelloWorld" method="lista" class="example.HelloWorld">
+            <result name="success">/example/HelloWorld.jsp</result>
+        </action>
+        <action name="login" method="lista" class="example.HelloWorld">            
+            <result name="input">/example/Lohgin.jsp</result>
+            <result name="success">/example/HelloWorld.jsp</result>
+        </action>
+        <action name="listado" method="lista" class="example.HelloWorld">                       
+            <result name="success">/example/HelloWorld.jsp</result>
+        </action>
+        <action name="Mostrar" method="Mostrar" class="example.HelloWorld">
+            <result name="success">/example/Mostrar.jsp</result>
+        </action>
+        <action name="Insertar" method="Insertar"  class="example.HelloWorld">
+            <result name="success">/example/Insertar.jsp</result>
+            <result type="redirect" name="inserto">listado.action</result>
+        </action>       
+        <action name="Editar" method="Editar" class="example.HelloWorld">
+            <result type="redirect" name="success">listado.action</result>
+        </action>
+        <action name="Eliminar" method="Eliminar" class="example.HelloWorld">
+            <result type="redirect" name="success">listado.action</result>
+        </action> 
+    </package>
+</struts>
+
